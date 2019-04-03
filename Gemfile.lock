@@ -16,6 +16,7 @@ GEM
     mustermann (1.0.3)
     nokogiri (1.9.1)
       mini_portile2 (~> 2.4.0)
+    pg (1.1.4)
     public_suffix (3.0.3)
     rack (2.0.7)
     rack-protection (2.0.5)
@@ -49,6 +50,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  pg
   rspec
   sinatra
 
