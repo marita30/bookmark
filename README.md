@@ -11,16 +11,16 @@ I would like to see a list of bookmarks
 * Add file of class, test, Servidor and views.
 * Add queries for the database:
 ```
-#Type of fuctions 📁 :
+# Type of fuctions 📁 :
 CREATE 
 INSERT
 SELECT
 DELETE
 UPDATE
 ```
-##Installation for the DataBase 🛠️
+## Installation for the DataBase 🛠️
+### DATA BASE 🏣
 ```
-#DATA BASE 🏣
 
 1- Connect to psql
 2- Create the database using the psql command CREATE DATABASE bookmark_manager and bookmark_manager_test ;
