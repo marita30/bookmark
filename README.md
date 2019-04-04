@@ -11,10 +11,19 @@ I would like to see a list of bookmarks
 * Add file of class, test, Servidor and views.
 * Add queries for the database:
 ```
-#Type of fuctions 📁 :
+# Type of fuctions 📁 :
 CREATE 
 INSERT
 SELECT
 DELETE
 UPDATE
+```
+## Installation for the DataBase 🛠️
+### DATA BASE 🏣
+```
+
+1- Connect to psql
+2- Create the database using the psql command CREATE DATABASE bookmark_manager and bookmark_manager_test ;
+3- Connect to the databases using the pqsl command \c bookmark_manager and bookmark_manager_test;
+4- Run the queries . we have saved in the file db/migration/ in each DataBase;
 ```
