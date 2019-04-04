@@ -1,5 +1,12 @@
 
-ENV['RACK_ENV'] = 'test'
+ENV['ENVIRONMENT'] = 'test'
+
+RSpec.configure do |config|
+  config.before(:each) do
+  setup_test_database
+  end
+end 
+
 
 # require our Sinatra app file
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
@@ -7,6 +14,7 @@ require File.join(File.dirname(__FILE__), '..', 'app.rb')
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+require_relative './setup_test_database'
 
 # tell Capybara about our app class
 Capybara.app = BookmarkManager
@@ -43,6 +51,11 @@ RSpec.configure do |config|
     # ...rather than:
     #     # => "be bigger than 2"
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+
+    config.before (:each) do
+      setup_test_database
+    end
+
   end
 
   # rspec-mocks config goes here. You can use an alternate test double
