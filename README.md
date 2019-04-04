@@ -18,9 +18,12 @@ SELECT
 DELETE
 UPDATE
 ```
-##Installation 🛠️
+##Installation for the DataBase 🛠️
 ```
-* For innitialize the database is: psql -U postgres -h localhost.
-* creating other database of tetst called  bookmark_manager_test.
-* creating other table 
+#DATA BASE :post_office:
+
+1- Connect to psql
+2- Create the database using the psql command CREATE DATABASE bookmark_manager and bookmark_manager_test ;
+3- Connect to the databases using the pqsl command \c bookmark_manager and bookmark_manager_test;
+4- Run the queries . we have saved in the file db/migration/ in each DataBase;
 ```
