@@ -21,5 +21,6 @@ UPDATE
 ##Installation 🛠️
 ```
 * For innitialize the database is: psql -U postgres -h localhost.
-* creating other database of tetst call it bookmark_manager_test.
+* creating other database of tetst called  bookmark_manager_test.
+* creating other table 
 ```
