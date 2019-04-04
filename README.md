@@ -20,7 +20,7 @@ UPDATE
 ```
 ##Installation for the DataBase 🛠️
 ```
-#DATA BASE :post_office:
+#DATA BASE 🏣
 
 1- Connect to psql
 2- Create the database using the psql command CREATE DATABASE bookmark_manager and bookmark_manager_test ;
