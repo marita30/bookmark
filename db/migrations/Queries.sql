@@ -7,6 +7,9 @@ CREATE DATABASE bookmark_manager;
 /* Creando una tabla */
 CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
 
+/* create a new column in the table bookmarks*/
+ALTER TABLE bookmarks ADD COLUMN title VARCHAR(60);
+
 
 
 /*seleccionar todo los datos de las tablas*/
