@@ -9,6 +9,10 @@ I would like to see a list of bookmarks
 As a user
 So I can store bookmark data for later retrieval
 I want to add a bookmark to Bookmark Manager
+
+As a user
+So I can change a bookmark in Bookmark Manager
+I want to update a bookmark
 ```
 ## Begin 🔧
 * Creaing a work environment to be able to continue with the othe steps.
