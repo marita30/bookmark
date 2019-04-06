@@ -2,6 +2,7 @@ require 'sinatra/base'
 require './lib/bookmark'
 
 class BookmarkManager < Sinatra::Base
+	enable :method_override
 
 	get '/' do
 		'Bookmark Manager'
@@ -10,7 +11,6 @@ class BookmarkManager < Sinatra::Base
 	get '/bookmarks' do
 		#print the ENV variable
 		#p 	ENV
-		
 		@bookmarks = Bookmark.all
 		erb :'bookmarks/index'
 	end
@@ -24,6 +24,18 @@ class BookmarkManager < Sinatra::Base
 		Bookmark.create(url: params[:url], title: params[:title])
 		redirect '/bookmarks'
 	end
+
+	get '/bookmarks/:id/edit' do
+		@bookmark = Bookmark.find(id: params[:id])
+		erb :'bookmarks/edit'
+	end
+
+	patch '/bookmarks/:id' do
+		Bookmark.update(id: params[:id], title: params[:title], url: params[:url])
+		redirect('/bookmarks')
+	end
+
+
 
 	run! if app_file == $0
 end

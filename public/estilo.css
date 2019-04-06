@@ -1,0 +1,35 @@
+body{
+	background-image: url(img/download.png);
+	background-color: white;
+	background-repeat: no-repeat;
+	background-size: 80em 100em;
+}
+
+.container{
+
+ width: 100%;
+ border: 100px inset silver ;
+ background-color: white;
+ margin-top: 5em;
+}
+
+a{
+	color: black;
+	font-family: roman;
+}
+form{
+	font-family: roman;
+	margin: 10px;
+	
+}
+
+input{
+	background-color: hotpink;
+	color: white;
+	border-radius: 5px;
+}
+
+ul{
+	margin-top: 20px
+		
+}
