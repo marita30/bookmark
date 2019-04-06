@@ -31,3 +31,7 @@ UPDATE
 3- Connect to the databases using the pqsl command \c bookmark_manager and bookmark_manager_test;
 4- Run the queries . we have saved in the file db/migration/ in each DataBase;
 ```
+## Execute ⚙️
+* for initialize the server is ruby app.rb;
+* for Initialize potsgre is psql -U postgres -h localhost;
+* for create a new colunm is  ALTER TABLE bookmarks ADD COLUMN title VARCHAR(60);
