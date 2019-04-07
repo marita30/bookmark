@@ -21,6 +21,10 @@ I want to update a bookmark
 As a user
 So that the bookmarks I save are useful
 I want to only save a valid URL
+
+As a user
+So that I can make interesting notes
+I want to add a Comment to a Bookmark
 ```
 ## Begin 🔧
 * Creaing a work environment to be able to continue with the othe steps.
@@ -47,6 +51,11 @@ UPDATE
 * for initialize the server is ruby app.rb;
 * for Initialize potsgre is psql -U postgres -h localhost;
 * for create a new colunm is  ALTER TABLE bookmarks ADD COLUMN title VARCHAR(60);
+
+## Entity Relationship Diagram 📌
+The below diagram indicates that:
+- A Bookmark *has many* Comments
+- A Comment *belongs to* a Bookmark
 
 ## Autor  ✒️
 ** **Maria Jose CHavarria Bravo** - *Trabajo Inicial* - [marita30](https://github.com/marita30/bookmark)
