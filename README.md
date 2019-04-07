@@ -21,6 +21,10 @@ I want to update a bookmark
 As a user
 So that the bookmarks I save are useful
 I want to only save a valid URL
+
+As a user
+So that I can make interesting notes
+I want to add a Comment to a Bookmark
 ```
 ## Begin 🔧
 * Creaing a work environment to be able to continue with the othe steps.
