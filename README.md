@@ -43,5 +43,6 @@ UPDATE
 * for initialize the server is ruby app.rb;
 * for Initialize potsgre is psql -U postgres -h localhost;
 * for create a new colunm is  ALTER TABLE bookmarks ADD COLUMN title VARCHAR(60);
-##Autor  ✒️
+
+## Autor  ✒️
 ** **Maria Jose CHavarria Bravo** - *Trabajo Inicial* - [marita30](https://github.com/marita30/bookmark)
