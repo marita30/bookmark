@@ -52,5 +52,10 @@ UPDATE
 * for Initialize potsgre is psql -U postgres -h localhost;
 * for create a new colunm is  ALTER TABLE bookmarks ADD COLUMN title VARCHAR(60);
 
+## Entity Relationship Diagram 📌
+The below diagram indicates that:
+- A Bookmark *has many* Comments
+- A Comment *belongs to* a Bookmark
+
 ## Autor  ✒️
 ** **Maria Jose CHavarria Bravo** - *Trabajo Inicial* - [marita30](https://github.com/marita30/bookmark)
