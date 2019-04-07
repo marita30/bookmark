@@ -13,6 +13,10 @@ I want to add a bookmark to Bookmark Manager
 As a user
 So I can change a bookmark in Bookmark Manager
 I want to update a bookmark
+
+As a user
+So that the bookmarks I save are useful
+I want to only save a valid URL
 ```
 ## Begin 🔧
 * Creaing a work environment to be able to continue with the othe steps.
@@ -39,3 +43,6 @@ UPDATE
 * for initialize the server is ruby app.rb;
 * for Initialize potsgre is psql -U postgres -h localhost;
 * for create a new colunm is  ALTER TABLE bookmarks ADD COLUMN title VARCHAR(60);
+
+## Autor  ✒️
+** **Maria Jose CHavarria Bravo** - *Trabajo Inicial* - [marita30](https://github.com/marita30/bookmark)
