@@ -28,6 +28,12 @@ class Bookmark
 	 	Bookmark.new(id: result[0]['id'], url: result[0]['url'], title: result[0]['title'])
 	end
 
+	def self.delete(id:)
+		
+    DatabaseConnection.query("DELETE FROM bookmarks WHERE id = #{id}")
+  end
+		
+
 	def self.update(id:, url:, title:)
 
 		result = DatabaseConnection.query("UPDATE bookmarks SET url = '#{url}', title = '#{title}' WHERE id = #{id} RETURNING id, url, title;")

@@ -22,4 +22,6 @@ feature 'Viewing bookmarks' do
 		expect(page).to have_link('Destroy All Software', href: 'http://www.destroyallsoftware.com') 
 		expect(page).to have_link('Google', href: 'http://www.google.com') 
 	end
+
+
 end

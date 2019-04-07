@@ -36,11 +36,27 @@ describe Bookmark do
 
 		it 'does not create a new bookmark if the URL not valid' do
 			bookmark = Bookmark.create(url: 'not a real bookmark', title: 'not a real bookmark')
-			
+
 
 			expect(bookmark).not_to be_a Bookmark
 		end
 	end
+
+	describe '.delete' do
+		it 'deletes the given bookmark' do
+
+			bookmark = Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers Academy' )
+
+			Bookmark.delete(id: bookmark.id)
+
+			expect(Bookmark.all.length).to eq 0
+		end
+	end
+
+
+
+
+
 
 	describe '.update' do
 		it 'Updates the bookmark with the given data' do
