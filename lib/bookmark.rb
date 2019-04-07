@@ -1,6 +1,7 @@
 
 require_relative 'database_connection'
 require 'uri'
+require_relative './comment'
 
 class Bookmark 
 
@@ -14,10 +15,10 @@ class Bookmark
 
 	def self.all
 
-		result = DatabaseConnection.query("SELECT * FROM bookmarks")
-		result.map do |bookmark|
+		bookmarks = DatabaseConnection.query('SELECT * FROM bookmarks;')
+		bookmarks.map do | bookmark|
 			Bookmark.new(url: bookmark['url'], title: bookmark['title'], id: bookmark['id'])
-		end
+		end			
 	end
 
 	def self.create(url:, title:)
@@ -47,11 +48,14 @@ class Bookmark
 		Bookmark.new(id: result[0]['id'], url: result[0]['url'], title: result[0]['title'])
 	end
 
+	def comments(comment_class = Comment)
+		comment_class.where(bookmark_id: id)
+	end
+
 	private
 
 	def self.is_url?(url)
-		url =~ URI::regexp(['http', 'https'])
-		
+		  url =~ URI::DEFAULT_PARSER.regexp[:ABS_URI]
 	end
 
 end

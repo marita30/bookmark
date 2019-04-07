@@ -3,12 +3,13 @@
 CREATE DATABASE bookmark_manager;
 
 
-
 /* Creando una tabla */
 CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
 
 /* create a new column in the table bookmarks*/
 ALTER TABLE bookmarks ADD COLUMN title VARCHAR(60);
+
+
 
 
 
@@ -31,3 +32,7 @@ DELETE FROM bookmarks WHERE url = 'http://www.twitter.com';
 
 /* Actualizando datos de la tabla*/
 UPDATE bookmarks SET url = 'http://www.destroyallsoftware.com' WHERE url = 'http://www.askjeeves.com';
+
+/*creando other table */
+
+CREATE TABLE comments(id SERIAL PRIMARY KEY, text VARCHAR(240), bookmark_id INTEGER REFERENCES bookmarks (id));
