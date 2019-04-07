@@ -33,6 +33,13 @@ describe Bookmark do
 			expect(bookmark.url).to eq 'http://www.testbookmark.com'
 			expect(bookmark.title).to eq 'Test Bookmark'
 		end
+
+		it 'does not create a new bookmark if the URL not valid' do
+			bookmark = Bookmark.create(url: 'not a real bookmark', title: 'not a real bookmark')
+			
+
+			expect(bookmark).not_to be_a Bookmark
+		end
 	end
 
 	describe '.update' do
