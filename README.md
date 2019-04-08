@@ -25,6 +25,10 @@ I want to only save a valid URL
 As a user
 So that I can make interesting notes
 I want to add a Comment to a Bookmark
+
+As a user
+So that I can categorize my bookmarks
+I want to add a Tag to a Bookmark
 ```
 ## Begin 🔧
 * Creaing a work environment to be able to continue with the othe steps.
