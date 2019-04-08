@@ -3,7 +3,8 @@ require 'database_helpers'
 
 
 describe Bookmark do
-	let(:comment_class) { double(:comment_class)}
+	let(:comment_class) { double(:comment_class) }
+	let(:tag_class) { double(:tag_class) }
 
 	describe '.all' do
 		it 'return a list of bookmarks' do
@@ -87,6 +88,15 @@ describe Bookmark do
 			expect(result.id).to eq bookmark.id
 			expect(result.url).to eq 'http://www.makersacademy.com'
 			expect(result.title).to eq 'Makers Academy'
+		end
+	end
+
+	describe '#tags' do
+		it 'calls .where on the tag class' do
+			bookmark = Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
+			expect(tag_class).to receive(:where).with(bookmark_id: bookmark.id)
+
+			bookmark.tags(tag_class)
 		end
 	end
 end

@@ -33,6 +33,13 @@ DELETE FROM bookmarks WHERE url = 'http://www.twitter.com';
 /* Actualizando datos de la tabla*/
 UPDATE bookmarks SET url = 'http://www.destroyallsoftware.com' WHERE url = 'http://www.askjeeves.com';
 
-/*creando other table */
+/*creando other table for the relation many of one */
 
 CREATE TABLE comments(id SERIAL PRIMARY KEY, text VARCHAR(240), bookmark_id INTEGER REFERENCES bookmarks (id));
+
+/* create other table for the relation many of many*/
+CREATE TABLE tags(id SERIAL PRIMARY KEY, content VARCHAR(60));
+CREATE TABLE bookmarks_tags(tag_id INTEGER REFERENCES tags (id), bookmark_id INTEGER REFERENCES bookmarks (id));
+  
+
+  
