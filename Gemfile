@@ -7,3 +7,4 @@ gem 'capybara', group: :test, require: false
 
 gem 'pg'
 gem 'sinatra-flash'
+gem 'bcrypt'

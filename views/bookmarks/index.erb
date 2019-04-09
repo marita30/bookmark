@@ -19,8 +19,12 @@
 	
 </h1>
 
+	<% if @user %>
+ 		<h1>Welcome, <%= @user.email %></h1>
+	<% end %>
+
    	
-        <ul>
+    <ul>
 
 	<% @bookmarks.each do |bookmark| %>
 
@@ -47,19 +51,17 @@
         <input type="submit" value="Add Tag" />
         </form>
 
-      <div>
+      <% if bookmark.comments.length > 0 %>
+        <div>
+          <h2>Comments</h2>
+          <ul>
+            <% bookmark.comments.each do |comment| %>
+              <li><%= comment.text %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
 
-        <h2>Comments</h2>
-
-        <ul>
-
-          <% bookmark.comments.each do |comment| %>
-            <li><%= comment.text %></li>
-          <% end %>
-
-        </ul>
-
-      </div>
 
      <% if bookmark.tags.length > 0 %>
         <div>
